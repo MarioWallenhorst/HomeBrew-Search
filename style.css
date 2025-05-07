@@ -1,0 +1,154 @@
+
+    :root {
+      --bg: #fbf7f2;
+      --card-bg: rgba(255, 255, 255, 0.7);
+      --accent: #e29578;
+      --accent-dark: #c4755b;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --text: #1f1f1f;
+      --subtle: #555;
+    }
+  
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+      font-weight: 600;
+    }
+  
+    input {
+      width: 100%;
+      max-width: 520px;
+      padding: 16px;
+      font-size: 1.1rem;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      box-shadow: inset 0 0 4px var(--shadow);
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+  
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 5px var(--accent);
+    }
+  
+    ul#suggestions {
+      max-width: 520px;
+      width: 100%;
+      list-style: none;
+      margin-top: 0.5rem;
+      padding: 0;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px var(--shadow);
+      overflow: hidden;
+    }
+  
+    ul#suggestions li {
+      padding: 12px 18px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 1rem;
+    }
+  
+    ul#suggestions li:hover {
+      background: #f9ede6;
+    }
+  
+    .result {
+      max-width: 640px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(20px);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    .result h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0.5rem 0;
+    }
+  
+    code {
+      background: #fff4ec;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+  
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+  
+    button:hover {
+      background: var(--accent-dark);
+    }
+  
+    .copied {
+      color: green;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    @media (max-width: 600px) {
+      input, .result {
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+      }
+  
+      .result h2 {
+        font-size: 1.3rem;
+      }
+    }
