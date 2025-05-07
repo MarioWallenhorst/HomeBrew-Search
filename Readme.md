@@ -17,3 +17,4 @@ Data is fetched from the **official Homebrew Formulae API**:
 ➡️ https://formulae.brew.sh/docs/api/
 
 > ⚠️ This project is intended **for educational and open-source purposes only**. It is **not officially affiliated** with the Homebrew project.
+# mariosproject
